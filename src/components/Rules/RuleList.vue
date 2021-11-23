@@ -28,9 +28,11 @@
           class="btn btn-outline-secondary"
           @click.prevent="showFormModal = false"
         >
+          <i class="bi bi-x-lg"></i>
           Cancel
         </button>
         <button class="btn btn-danger" @click.prevent="callRemoveRule">
+          <i class="bi bi-trash"></i>
           Deleted
         </button>
         <button
@@ -38,6 +40,7 @@
           class="btn btn-success"
           @click.prevent="callUpdateRule"
         >
+          <i class="bi bi-check2"></i>
           Confirm
         </button>
       </span>
