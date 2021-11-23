@@ -20,6 +20,11 @@ strong.error {
   color: $color-error;
 }
 
+.form-check-input:checked {
+  background-color: #1A4578;
+  border-color: #1A4578;
+}
+
 @media (max-width: 480px) {
   .col, .rule-form-select-area {
     display: block !important;
