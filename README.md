@@ -1,5 +1,8 @@
 # bg_rules
 
+## Node version tested
+10.15.0
+
 ## Project setup
 ```
 npm install
