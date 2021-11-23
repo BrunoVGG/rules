@@ -178,10 +178,6 @@ export default {
         this.isSelectedJustAParent = true;
       }
     },
-    toggle() {
-      this.showOptions = true;
-    },
-
     hide() {
       this.showOptions = false;
 
