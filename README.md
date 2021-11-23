@@ -1,4 +1,4 @@
-# bg_events
+# bg_rules
 
 ## Project setup
 ```
