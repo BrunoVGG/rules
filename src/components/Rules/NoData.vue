@@ -23,9 +23,6 @@
 <script>
 export default {
   name: "NoData",
-  props: {
-    msg: String,
-  },
   methods: {
     showFormNewEvent() {
       this.$emit("show-form-new-event");

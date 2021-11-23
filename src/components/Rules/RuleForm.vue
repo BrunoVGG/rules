@@ -20,9 +20,9 @@
         id="titleInput"
         ref="titleInput"
         v-model.trim="form.title"
+        :class="{ error: errorTitle }"
         class="form-control"
         placeholder="Title"
-        :class="{ error: errorTitle }"
         maxlength="100"
         focus
         @change="updateEdit"

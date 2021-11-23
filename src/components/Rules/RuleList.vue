@@ -104,9 +104,6 @@ export default {
     NoData,
     RuleForm,
   },
-  props: {
-    msg: String,
-  },
   computed: {
     ...mapState({
       eventsList: (state) => state.rules.rules,
