@@ -9,11 +9,10 @@
       <RuleForm />
     </div>
 
-    <el-dialog :visible.sync="showFormModal"> </el-dialog>
-
     <el-dialog
       width="80%"
       title="Edit Rule"
+      :close-on-click-modal="false"
       :visible.sync="showFormModal"
       :before-close="handleCloseModal"
     >
@@ -65,6 +64,11 @@
         >
           <template slot-scope="scope">
             <div class="form-check form-switch mt-2">
+            <el-tooltip
+              :content="scope.row.enabled ? 'Disable' : 'Enable'"
+              placement="top"
+              effect="light"
+            >
               <input
                 class="form-check-input cursor-hand"
                 type="checkbox"
@@ -73,21 +77,23 @@
                 v-model="scope.row.enabled"
                 @change="toggleEnabled(scope.row)"
               />
+            </el-tooltip>
             </div>
           </template>
         </el-table-column>
-        <el-table-column
-          property="title"
-          label=""
-          show-overflow-tooltip
-          width="50"
-        >
+        <el-table-column show-overflow-tooltip width="50">
           <template slot-scope="scope">
-            <i
-              role="button"
-              @click="editEvent(scope.row)"
-              class="bi bi-three-dots-vertical cursor-hand"
-            ></i>
+            <el-tooltip
+              content="Edit"
+              placement="top"
+              effect="light"
+            >
+              <i
+                role="button"
+                @click="editEvent(scope.row)"
+                class="bi bi-three-dots-vertical cursor-hand"
+              ></i>
+            </el-tooltip>
           </template>
         </el-table-column>
       </el-table>
