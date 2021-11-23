@@ -10,7 +10,6 @@
         v-if="!showTitleInput"
         @click.prevent="setShowTilteInput"
         class="titleLabel"
-        :class="{ error: errorTitle }"
       >
         {{ form.title || "Untitled Rule" }}
         <i class="bi bi-pencil cursor-hand"></i>
@@ -20,7 +19,6 @@
         id="titleInput"
         ref="titleInput"
         v-model.trim="form.title"
-        :class="{ error: errorTitle }"
         class="form-control"
         placeholder="Title"
         maxlength="100"
@@ -133,9 +131,6 @@ export default {
     ...mapState({
       eventsList: (state) => state.rules.events,
     }),
-    errorTitle() {
-      return this.wasSubmited && !this.form.title ? true : false;
-    },
     errorStatus() {
       return this.wasSubmited && !this.form.statusId ? true : false;
     },
@@ -152,7 +147,6 @@ export default {
     },
     hasError() {
       return (
-        this.errorTitle ||
         this.errorStatus ||
         this.errorAction ||
         this.errorPeriod ||
@@ -160,8 +154,7 @@ export default {
       );
     },
     allInputsHasValue() {
-      return this.form.title &&
-        this.form.statusId &&
+      return this.form.statusId &&
         this.form.actionId &&
         this.form.periodId &&
         this.form.days &&
@@ -178,7 +171,7 @@ export default {
 
     if (this.edit) {
       this.form = cloneDeep(this.edit);
-      this.showTitleInput = true;
+      this.showTitleInput = false;
       this.wasSubmited = true;
     }
   },
@@ -204,7 +197,10 @@ export default {
         });
       }
 
-      this.addRule(cloneDeep(this.form));
+      const data = cloneDeep(this.form);
+      if (!data.title) data.title = "Untitled Rule";
+
+      this.addRule(data);
       this.onReset();
 
       this.$notify.success({

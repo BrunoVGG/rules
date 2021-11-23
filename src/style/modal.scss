@@ -7,6 +7,10 @@
   }
 }
 
+.el-dialog {
+  max-width: 1000px;
+}
+
 @media (max-width: 480px) {
   .el-dialog {
     width: 100% !important;
