@@ -150,11 +150,6 @@ export default {
 
       return "";
     },
-    showfirstLavel() {
-      if (this.showChildren) return false;
-
-      return true;
-    },
   },
   methods: {
     onClickBack() {
