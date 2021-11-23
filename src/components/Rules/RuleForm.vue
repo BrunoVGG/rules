@@ -38,9 +38,9 @@
         <FormSelect
           v-model="form.statusId"
           :options="status"
-          placeholder="Choose Status"
           :iconClass="`bi bi-people`"
           :error="errorStatus"
+          placeholder="Choose Status"
           @change="updateEdit"
         />
       </div>
@@ -52,10 +52,10 @@
         <FormSelect
           v-model="form.actionId"
           :options="actions"
-          placeholder="Choose Action"
           :iconClass="`bi bi-gear`"
           :disabled="!form.statusId"
           :error="errorAction"
+          placeholder="Choose Action"
           @change="updateEdit"
         />
       </div>
@@ -64,10 +64,10 @@
         <form-select
           v-model="form.periodId"
           :options="periods"
-          placeholder="Choose When"
           :iconClass="`bi bi-alarm`"
           :disabled="!form.actionId"
           :error="errorPeriod"
+          placeholder="Choose When"
           @change="updateEdit"
         >
           <input
@@ -97,7 +97,7 @@ import { mapActions, mapState } from "vuex";
 import FormSelect from "@/components/Form/FormSelect.vue";
 
 export default {
-  name: "EventsForm",
+  name: "RuleForm",
   components: {
     FormSelect,
   },

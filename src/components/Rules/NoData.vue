@@ -1,20 +1,19 @@
 <template>
   <div class="mt-5">
     <h1>
-      User <br /> automation
+      User <br />
+      automation
     </h1>
     <p>
-      Now you can create automations and automatically perform actions in regards to your users.
+      Now you can create automations and automatically perform actions in
+      regards to your users.
     </p>
     <p>
-      You can decide when users should be 
+      You can decide when users should be
       <strong>activated, deactivated, anonymized and deleted</strong>.
     </p>
     <p>
-      <button
-        class="btn btn-success"
-        @click.prevent="showFormNewEvent"
-      >
+      <button class="btn btn-success" @click.prevent="showFormNewEvent">
         + Create rule
       </button>
     </p>
@@ -23,16 +22,16 @@
 
 <script>
 export default {
-  name: 'NoData',
+  name: "NoData",
   props: {
-    msg: String
+    msg: String,
   },
   methods: {
     showFormNewEvent() {
-      this.$emit('show-form-new-event');
-    }
-  }
-}
+      this.$emit("show-form-new-event");
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">

@@ -21,7 +21,7 @@ const mutations = {
 
 const actions = {
   getRules() {
-    // // FETCH EXAMPLE
+    // FETCH EXAMPLE
     // return new Promise((resolve, reject) => {
     // return new Promise((resolve, reject) => {
     //   fetch('https://www.myapi.com/rules', {
@@ -48,7 +48,7 @@ const actions = {
     newEvent.id = new Date().getTime();
     commit('addRule', newEvent);
 
-    // // FETCH EXAMPLE
+    // FETCH EXAMPLE
     // return new Promise((resolve, reject) => {
     //   fetch('https://www.myapi.com/rules', {
     //     method: 'POST',

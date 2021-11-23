@@ -52,7 +52,7 @@
 import ClickOutside from "vue-click-outside";
 
 export default {
-  name: "NoData",
+  name: "FormSelect",
   props: {
     value: {
       type: [Number, String, null],
@@ -174,7 +174,7 @@ export default {
     onSelect(option) {
       this.$emit("input", option.value);
 
-      this.$emit('change', option);
+      this.$emit("change", option);
 
       if (!option.children) {
         this.showOptions = false;
@@ -188,7 +188,6 @@ export default {
     },
 
     hide() {
-      console.log("isSelectedJustAParent", this.isSelectedJustAParent);
       this.showOptions = false;
 
       if (this.isSelectedJustAParent) {

@@ -5,19 +5,16 @@
       @show-form-new-event="showFormNewEvent"
     />
 
-    <div
-      v-if="showForm || eventsList.length"
-      class="mt-5 container card"
-    >
+    <div v-if="showForm || eventsList.length" class="mt-5 container card">
       <RuleForm />
     </div>
 
     <el-dialog :visible.sync="showFormModal"> </el-dialog>
 
     <el-dialog
+      width="80%"
       title="Edit Rule"
       :visible.sync="showFormModal"
-      width="80%"
       :before-close="handleCloseModal"
     >
       <RuleForm
@@ -96,8 +93,8 @@
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
 import { cloneDeep } from "lodash";
+import { mapState, mapActions } from "vuex";
 import NoData from "@/components/Rules/NoData.vue";
 import RuleForm from "@/components/Rules/RuleForm.vue";
 
@@ -133,33 +130,6 @@ export default {
       editModel: null,
       editKey: 0,
       tableKey: 0,
-      fields: [
-        { key: "selected", label: "", class: "column_select" },
-        {
-          key: "title",
-          label: "Rule Name",
-          sortable: true,
-          class: "column_title",
-        },
-        { key: "actions", label: "", class: "column_actions" },
-      ],
-      items: [
-        { age: 40, first_name: "Dickerson", last_name: "Macdonald" },
-        { age: 21, first_name: "Larsen", last_name: "Shaw" },
-        {
-          age: 89,
-          first_name: "Geneva",
-          last_name: "Wilson",
-          _rowVariant: "danger",
-        },
-        {
-          age: 40,
-          first_name: "Thor",
-          last_name: "MacDonald",
-          _cellVariants: { age: "info", first_name: "warning" },
-        },
-        { age: 29, first_name: "Dick", last_name: "Dunlap" },
-      ],
     };
   },
   methods: {
