@@ -251,6 +251,10 @@ export default {
 .title-area {
   margin-bottom: 2rem;
   max-width: 420px;
+
+  input {
+    padding: 2px 5px;
+  }
 }
 
 .input-days {

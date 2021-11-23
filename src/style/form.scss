@@ -1,4 +1,5 @@
 $color-error: rgb(186, 36, 36);
+$bk-color: #1A4578;
 
 form {
   footer {
@@ -21,8 +22,8 @@ strong.error {
 }
 
 .form-check-input:checked {
-  background-color: #1A4578;
-  border-color: #1A4578;
+  background-color: $bk-color;
+  border-color: $bk-color;
 }
 
 @media (max-width: 480px) {
