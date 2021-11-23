@@ -4,7 +4,7 @@
       User <br /> automation
     </h1>
     <p>
-      Now you can create automataions and automatically perform actions in regards to your users.
+      Now you can create automations and automatically perform actions in regards to your users.
     </p>
     <p>
       You can decide when users should be 

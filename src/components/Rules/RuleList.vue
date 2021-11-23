@@ -98,7 +98,7 @@
 <script>
 import { mapState, mapActions } from "vuex";
 import { cloneDeep } from "lodash";
-import NoData from "@/components/NoData.vue";
+import NoData from "@/components/Rules/NoData.vue";
 import RuleForm from "@/components/Rules/RuleForm.vue";
 
 export default {
