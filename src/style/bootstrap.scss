@@ -1,0 +1,11 @@
+$green: #2EC2B0;
+$green-dark: #26ac9c;
+
+.btn-success {
+  background-color: $green;
+  border: 1px solid $green;
+
+  &:hover {
+    background-color: $green-dark;
+  }
+}

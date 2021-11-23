@@ -1,5 +1,9 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h2 class="mt-5">
+      <a href="https://www.linkedin.com/in/brunovgggomes/" target="_blank">
+        by Bruno Gomes
+      </a>
+    </h2>
   </div>
 </template>

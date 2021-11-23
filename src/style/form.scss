@@ -1,0 +1,29 @@
+$color-error: rgb(186, 36, 36);
+
+form {
+  footer {
+    padding-top: 2rem;
+    text-align: right;
+  }
+
+  .col:last-child {
+    padding-right: 0px !important;
+  } 
+}
+
+input.error {
+  border: 1px solid $color-error;
+  background-color: rgb(247, 229, 229);
+}
+
+strong.error {
+  color: $color-error;
+}
+
+@media (max-width: 480px) {
+  .col, .rule-form-select-area {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+}
