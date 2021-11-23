@@ -207,6 +207,8 @@ $color-error: rgb(136, 26, 26);
 
     .toggle-icon {
       float: right;
+      position: absolute;
+      right: 5px;
     }
 
     &.disabled {

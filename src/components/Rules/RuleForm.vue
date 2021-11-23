@@ -256,7 +256,7 @@ export default {
 .input-days {
   border: 1px solid #e2e2e2;
   margin-left: 5px;
-  width: 70px;
+  width: 60px;
   text-align: center;
 }
 
