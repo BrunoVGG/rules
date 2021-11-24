@@ -90,8 +90,8 @@
             >
               <i
                 role="button"
-                @click="editEvent(scope.row)"
                 class="bi bi-three-dots-vertical cursor-hand"
+                @click="editEvent(scope.row)"
               ></i>
             </el-tooltip>
           </template>
