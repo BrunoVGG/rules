@@ -231,6 +231,7 @@ $color-error: rgb(136, 26, 26);
     border-radius: 0 0 5px 5px;
     -webkit-box-shadow: 0px 3px 13px -4px #000000;
     box-shadow: 0px 3px 13px -4px #000000;
+    background-color: #ffffff;
 
     li {
       position: relative;
