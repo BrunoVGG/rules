@@ -18,6 +18,7 @@
         :key="i"
         v-for="(option, i) in options"
         v-show="!showChildren"
+        :class="{ selected: option.value === value }"
         @click.prevent="onSelect(option)"
       >
         {{ option.text }}
@@ -27,8 +28,8 @@
       <li
         ref="backList"
         id="backList"
-        class="option-back"
         v-show="showChildren"
+        class="option-back"
         @click.prevent="onClickBack"
       >
         <i class="bi bi-arrow-left"></i> Back
@@ -39,6 +40,7 @@
       <li
         v-for="(option, i) in children"
         :key="`Child${i}`"
+        :class="{ selected: option.value === value }"
         class="option-child"
         @click.prevent="onSelect(option)"
       >
@@ -242,7 +244,7 @@ $color-error: rgb(136, 26, 26);
       border-radius: 0 0 5px 5px;
 
       &.selected {
-        background-color: #e2e2e2;
+        background-color: #f2f2f2;
       }
 
       &:hover {
