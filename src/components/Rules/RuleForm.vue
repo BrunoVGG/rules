@@ -154,13 +154,13 @@ export default {
       );
     },
     allInputsHasValue() {
-      return this.form.statusId &&
-        this.form.actionId &&
-        this.form.periodId &&
-        this.form.days &&
-        this.form.days > 0
-        ? true
-        : false;
+      return Boolean(
+        this.form.statusId &&
+          this.form.actionId &&
+          this.form.periodId &&
+          this.form.days &&
+          this.form.days > 0
+      );
     },
     submitClass() {
       return this.allInputsHasValue ? "btn-success" : "btn-secondary ghost";
