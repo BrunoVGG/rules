@@ -23,7 +23,6 @@ const actions = {
   getRules() {
     // FETCH EXAMPLE
     // return new Promise((resolve, reject) => {
-    // return new Promise((resolve, reject) => {
     //   fetch('https://www.myapi.com/rules', {
     //     method: 'GET',
     //     headers: {
@@ -44,9 +43,9 @@ const actions = {
     // });
     // });
   },
-  addRule({ commit }, newEvent) {
-    newEvent.id = new Date().getTime();
-    commit('addRule', newEvent);
+  addRule({ commit }, newRule) {
+    newRule.id = new Date().getTime();
+    commit('addRule', newRule);
 
     // FETCH EXAMPLE
     // return new Promise((resolve, reject) => {

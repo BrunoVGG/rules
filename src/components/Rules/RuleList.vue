@@ -1,14 +1,5 @@
 <template>
   <div class="hello">
-    <NoData
-      v-if="!eventsList.length && !showForm"
-      @show-form-new-event="showFormNewEvent"
-    />
-
-    <div v-if="showForm || eventsList.length" class="mt-5 container card">
-      <RuleForm />
-    </div>
-
     <el-dialog
       width="80%"
       title="Edit Rule"
@@ -45,10 +36,19 @@
       </span>
     </el-dialog>
 
-    <div v-if="eventsList.length" class="mt-4 mb-5 card container">
+    <NoData
+      v-if="!rulesList.length && !showForm"
+      @show-form-new-event="showFormNewEvent"
+    />
+
+    <div v-if="showForm || rulesList.length" class="mt-5 container card">
+      <RuleForm />
+    </div>
+
+    <div v-if="rulesList.length" class="mt-4 mb-5 card container">
       <el-table
         ref="multipleTable"
-        :key="`RuleTable${eventsList.length}${tableKey}`"
+        :key="`RuleTable${rulesList.length}${tableKey}`"
         :data="dataRows"
         style="width: 100%"
         @selection-change="handleSelectionChange"
@@ -115,13 +115,14 @@ export default {
   },
   computed: {
     ...mapState({
-      eventsList: (state) => state.rules.rules,
+      rulesList: (state) => state.rules.rules,
     }),
     dataRows: {
       get() {
-        return this.eventsList;
+        return this.rulesList;
       },
       set(newValue) {
+        // this.$emit('update:data', newValue);
         console.log("Changed data", newValue);
       },
     },

@@ -91,7 +91,7 @@
 <script>
 import { cloneDeep } from "lodash";
 import { RULES } from "@/config/const.js";
-import { mapActions, mapState } from "vuex";
+import { mapActions } from "vuex";
 import FormSelect from "@/components/Form/FormSelect.vue";
 
 export default {
@@ -128,9 +128,6 @@ export default {
     };
   },
   computed: {
-    ...mapState({
-      eventsList: (state) => state.rules.events,
-    }),
     errorStatus() {
       return this.wasSubmited && !this.form.statusId ? true : false;
     },
